@@ -1,0 +1,15 @@
+body {
+  background-color: #bdc3c7;
+}
+
+#search-container {
+  height: 3vh;
+}
+
+#search {
+  height: 100%;
+}
+
+#search-btn {
+  height: 100%;
+}
