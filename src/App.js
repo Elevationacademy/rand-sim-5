@@ -1,15 +1,14 @@
-import { React, Component } from 'react';
+import  React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from './components/Dashboard';
+import SearchSection from './components/SearchSection';
 
 class App extends Component {
 
   render() {
     return (
       <div>
-
-        <Dashboard />
+        <SearchSection />
       </div>
     );
   }
