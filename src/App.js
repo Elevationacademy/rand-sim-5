@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'
 import SearchSection from './components/SearchSection';
+import ImageSection from './components/ImageSection';
+
 
 class App extends Component {
 
@@ -22,7 +24,7 @@ class App extends Component {
     return (
       <div>
         <SearchSection requestPhotos={this.requestPhotos} />
-        {/* <ImageSection images={this.state.images} /> */}
+        <ImageSection images={this.state.images} />
       </div>
     );
   }
