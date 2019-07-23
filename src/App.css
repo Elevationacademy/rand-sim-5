@@ -19,3 +19,18 @@ body {
   height: 100px;
   background-color: white;
 }
+
+#images-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+/* .image {
+  width: 100%;
+} */
+
+.image img {
+  max-width:100%;
+  height: auto;
+}
