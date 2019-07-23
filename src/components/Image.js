@@ -5,7 +5,9 @@ class Image extends Component {
 
   render() {
     return (
-      <div>Hey</div>
+      <div>
+        {this.props.image}
+      </div>
     )
   }
 }
