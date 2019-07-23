@@ -8,8 +8,8 @@ class Image extends Component {
     console.log(this.props.image)
 
     return (
-      <div>
-        hey
+      <div className="image">
+        <img src={this.props.image.url}/>
       </div>
     )
   }

@@ -30,7 +30,7 @@ class ImageSection extends Component {
     // this.checkIfImagesExist()
 
     return (
-      <div>
+      <div id="images-container">
         {/* {this.state.isLoading ? <LazyLoader /> :} */}
           {this.props.images.map(i => <Image image={i} />)}
       </div>
