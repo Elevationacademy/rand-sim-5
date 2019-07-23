@@ -1,15 +1,17 @@
-import  React, { Component } from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class Image extends Component {
 
 
   render() {
 
-    console.log(this.props.image)
+    const image = this.props.image
+    console.log(image)
 
     return (
       <div className="image">
-        <img src={this.props.image.url}/>
+        <Link to={`image/${image.id}`}><img src={image.url} /></Link>
       </div>
     )
   }
