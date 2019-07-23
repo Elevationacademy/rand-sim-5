@@ -4,9 +4,12 @@ class Image extends Component {
 
 
   render() {
+
+    console.log(this.props.image)
+
     return (
       <div>
-        {this.props.image}
+        hey
       </div>
     )
   }

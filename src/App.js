@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   requestPhotos = async input => {
-    const images = await axios.get('http://localhost:8989')
+    const images = await axios.get(`http://localhost:8989/api/photos/search/${input}`)
     this.setState({ images: images.data })
   }
 

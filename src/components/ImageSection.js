@@ -27,11 +27,12 @@ class ImageSection extends Component {
   render() {
     // let images = this.props.images.length ? this.props.images : this.createLazyLoader()
     // !images.length ? images = this.createLazyLoader() : null
-    this.checkIfImagesExist()
+    // this.checkIfImagesExist()
 
     return (
       <div>
-        {this.state.isLoading ? <LazyLoader /> : this.props.images.map(i => <Image image={i} />)}
+        {/* {this.state.isLoading ? <LazyLoader /> :} */}
+          {this.props.images.map(i => <Image image={i} />)}
       </div>
     )
   }

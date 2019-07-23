@@ -13,3 +13,9 @@ body {
 #search-btn {
   height: 100%;
 }
+
+.empty-image {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
