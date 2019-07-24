@@ -11,7 +11,7 @@ class SearchSection extends Component {
     };
   }
 
-  requestPhotos = () => this.props.requestPhotos(this.state.input);
+  requestPhotos = () => this.props.requestPhotos(this.state.input, true);
 
   handleInput = e => this.setState({ input: e.target.value });
 

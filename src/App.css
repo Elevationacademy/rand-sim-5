@@ -70,3 +70,62 @@ body {
 .grid-item {
   width: 30%;
 }
+
+#single-image {
+  background-color: white;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 10px;
+  padding-bottom: 40px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  margin-top: 2vh;
+}
+
+#single-image-container {
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  /* margin-bottom: 5vh; */
+}
+
+#single-image img {
+  margin-top: 20px;
+  max-width: 90%;
+  max-height: 50%;
+  /* max */
+  /* height: auto; */
+}
+
+.color-scheme {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 3px;
+  border: solid 0.5px rgb(77, 77, 77);
+}
+
+#color-palette {
+  margin-top: 5px;
+}
+
+#likes-section {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #706f6f;
+}
+
+#likes {
+  justify-self: start;
+}
+
+#camera {
+  justify-self: end;
+}
+
+#likes-section i {
+  margin-right: 10px;
+}
