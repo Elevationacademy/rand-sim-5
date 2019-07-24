@@ -22,11 +22,11 @@ class Photo extends Component {
   renderData = image => {
     return (
       <div id="single-image">
-        <img src={image.urls.regular} />
+        <img alt="" src={image.urls.regular} />
         <Palette palette={image.palette} />
         <div id="likes-section">
-          <div id="likes"><i class="fas fa-thumbs-up"></i>{image.likes}</div>
-          <div id="camera"><i class="fas fa-camera"></i>{image.camera.make}</div>
+          <div id="likes"><i className="fas fa-thumbs-up"></i>{image.likes}</div>
+          <div id="camera"><i className="fas fa-camera"></i>{image.camera.make}</div>
         </div>
       </div>
     );
@@ -34,8 +34,12 @@ class Photo extends Component {
 
   render() {
     const image = this.state.image; //props.findPhoto(this.props.match.params.imageID)
-    console.log(image);
-    return <div id="single-image-container">{image.urls ? this.renderData(image) : null}</div>;
+
+    return (
+      <div id="single-image-container">
+        {image.urls ? this.renderData(image) : null}
+      </div>
+    );
   }
 }
 

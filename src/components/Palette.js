@@ -24,7 +24,7 @@ class Palette extends Component {
 
     return (
       <div id="color-palette">
-        {this.state.palette.map(p => <Color rgb={p.rgb} />)}
+        {this.state.palette.map((p, i) => <Color key={i} rgb={p.rgb} />)}
       </div>
     )
   }

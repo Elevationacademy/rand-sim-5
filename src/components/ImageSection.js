@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Image from './Image';
-import LazyLoader from './LazyLoader';
 import Masonry from 'react-masonry-component';
 
 const masonryOptions = {

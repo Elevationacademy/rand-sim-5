@@ -12,7 +12,7 @@ class Image extends Component {
     return (
       <div className="image">
         <div className="grid-sizer"></div>
-        <Link className="grid-item" to={`image/${image.id}`}><img src={image.url} /></Link>
+        <Link className="grid-item" to={`image/${image.id}`}><img alt="" src={image.url} /></Link>
       </div>
     )
   }
