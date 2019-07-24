@@ -4,7 +4,7 @@ class Photo extends Component {
 
   render() {
     const image = this.props.findPhoto(this.props.match.params.imageID)
-    console.log(image)
+
     return (
       <img src={image.url} />
     )

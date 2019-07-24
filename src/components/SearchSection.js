@@ -1,29 +1,32 @@
-import  React, { Component } from 'react';
+import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 // import Dashboard from './components/Dashboard';
 
 class SearchSection extends Component {
-
   constructor() {
-    super()
+    super();
     this.state = {
-      input: ""
-    }
+      input: ''
+    };
   }
 
-  requestPhotos = () => this.props.requestPhotos(this.state.input)
+  requestPhotos = () => this.props.requestPhotos(this.state.input);
 
-  handleInput = e => this.setState({ input: e.target.value })
+  handleInput = e => this.setState({ input: e.target.value });
 
   render() {
     return (
-      <div id="search-container">
-        <input type="text" id="search" value={this.state.input} onChange={this.handleInput}/>
-        <button id="search-btn" onClick={this.requestPhotos}>Photo Me!</button>
+      <div id="outer-search">
+        <div id="search-container">
+          <input type="text" id="search" placeholder="search photos" value={this.state.input} onChange={this.handleInput} />
+          <div id="search-btn" onClick={this.requestPhotos}>
+            <i className="fas fa-search" />
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
 
-export default SearchSection
+export default SearchSection;
