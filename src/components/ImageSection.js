@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Image from './Image';
 import Masonry from 'react-masonry-component';
+import LoadMoreButton from './LoadMoreButton';
 
 class ImageSection extends Component {
 
@@ -22,7 +23,8 @@ class ImageSection extends Component {
         >
           {childElements}
         </Masonry>
-        <div id="btn-container">{this.props.page ? <div id="load-btn" onClick={this.requestPhotos} >LOAD MORE</div> : null}</div>
+        <LoadMoreButton page={this.props.page} requestPhotos={this.props.requestPhotos}/>
+        {/* <div id="btn-container">{this.props.page ? <div id="load-btn" onClick={this.requestPhotos} >LOAD MORE</div> : null}</div> */}
       </div>
     );
   }
