@@ -8,9 +8,11 @@ class SearchSection extends Component {
     };
   }
 
-  handleSearch = () => this.props.handleSearch(this.state.input, true);
+  handleSearch = () => this.props.handleSearch(this.state.input, true)
 
-  handleInput = e => this.setState({ input: e.target.value });
+  handleInput = e => this.setState({ input: e.target.value })
+
+  handleKeyDown = e => { if (e.key === 'Enter') { this.handleSearch() } }
 
   render() {
     return (
@@ -22,6 +24,7 @@ class SearchSection extends Component {
             placeholder="search photos"
             value={this.state.input}
             onChange={this.handleInput}
+            onKeyDown={this.handleKeyDown}
           />
           <div id="search-btn" onClick={this.handleSearch}>
             <i className="fas fa-search" />
