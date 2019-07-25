@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchSection from './SearchSection';
-import ImageSection from './ImageSection';
+import PhotoGallery from './PhotoGallery';
 
 class Home extends Component {
 
@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div>
         <SearchSection requestPhotos={this.props.requestPhotos} />
-        {this.props.images.length ? <ImageSection requestPhotos={this.props.requestPhotos} page={this.props.page} images={this.props.images} /> : null}
+        {this.props.images.length ? <PhotoGallery requestPhotos={this.props.requestPhotos} page={this.props.page} images={this.props.images} /> : null}
       </div>
     );
   }

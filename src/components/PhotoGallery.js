@@ -8,7 +8,7 @@ const masonryOptions = {
   // fitWidth: true
   // percentPosition: true
 };
-class ImageSection extends Component {
+class PhotoGallery extends Component {
   constructor() {
     super();
     this.state = {
@@ -67,4 +67,4 @@ class ImageSection extends Component {
   }
 }
 
-export default ImageSection;
+export default PhotoGallery;

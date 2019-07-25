@@ -11,9 +11,7 @@ class Photo extends Component {
   }
 
   componentDidMount = async () => {
-    const image = await axios.get(
-      `http://localhost:8989/api/photos/${this.props.match.params.imageID}`
-    );
+    const image = await axios.get(`http://localhost:8989/api/photos/${this.props.match.params.imageID}`);
     this.setState({ image: image.data });
   };
 
@@ -34,7 +32,7 @@ class Photo extends Component {
             </div>
             <div id="camera"><i className="fas fa-camera"></i>{image.camera.make}</div>
             </div>
-          
+
       </div>
     );
   };
