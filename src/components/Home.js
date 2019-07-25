@@ -8,8 +8,7 @@ class Home extends Component {
     return (
       <div>
         <SearchSection requestPhotos={this.props.requestPhotos} />
-        <ImageSection images={this.props.images} />
-        {this.props.page ? <div>LOAD MORE</div> : null}
+        {this.props.images.length ? <ImageSection requestPhotos={this.props.requestPhotos} page={this.props.page} images={this.props.images} /> : null}
       </div>
     );
   }

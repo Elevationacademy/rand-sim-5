@@ -4,7 +4,8 @@ import Masonry from 'react-masonry-component';
 
 const masonryOptions = {
   columnWidth: '.grid-sizer',
-  itemSelector: '.grid-item'
+  itemSelector: '.grid-item',
+  // fitWidth: true
   // percentPosition: true
 };
 class ImageSection extends Component {
@@ -30,6 +31,15 @@ class ImageSection extends Component {
     }
   };
 
+  // componentDidMount() {
+  //     this.hide();
+  // }
+  // handleImagesLoaded(imagesLoadedInstance) {
+  //     this.show();
+  // }
+
+  requestPhotos = () => this.props.requestPhotos(null, false)
+
   render() {
     // let images = this.props.images.length ? this.props.images : this.createLazyLoader()
     // !images.length ? images = this.createLazyLoader() : null
@@ -39,16 +49,20 @@ class ImageSection extends Component {
     const imagesLoadedOptions = { background: '.image' };
 
     return (
-      <Masonry
-        // className={'my-gallery-class'} // default ''
-        // elementType={'ul'} // default 'div'
-        options={masonryOptions} // default {}
-        // disableImagesLoaded={false} // default false
-        // updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-        imagesLoadedOptions={imagesLoadedOptions} // default {}
-      >
-        {childElements}
-      </Masonry>
+      <div>
+        <Masonry
+          // className={'my-gallery-class'} // default ''
+          // elementType={'ul'} // default 'div'
+          options={masonryOptions} // default {}
+          // disableImagesLoaded={false} // default false
+          // updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+          onImagesLoaded={this.handleImagesLoaded}
+          // imagesLoadedOptions={imagesLoadedOptions} // default {}
+        >
+          {childElements}
+        </Masonry>
+        {this.props.page ? <div onClick={this.requestPhotos} >LOAD MORE</div> : null}
+        </div>
     );
   }
 }

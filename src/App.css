@@ -104,7 +104,7 @@ body {
 
 #single-image img {
   margin-top: 20px;
-  /* max-width: 90%; */
+  max-width: 90%;
   max-height: 85%;
   /* max */
   /* height: auto; */
@@ -121,12 +121,13 @@ body {
 
 #color-palette {
   margin-top: 35px;
+  margin-bottom: 10px;
 }
 
 #likes-section {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   color: #706f6f;
 }
 
@@ -141,3 +142,23 @@ body {
 #likes-section i {
   margin-right: 10px;
 }
+
+#tags {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; */
+  text-align: center;
+}
+
+.tag {
+  cursor: pointer;
+  background-color: #d6d9db;
+  padding: 3px;
+  margin: 3px;
+  border-radius: 3px;
+}
+
+.tag:hover {
+  background-color: #bdc3c7;
+}
+

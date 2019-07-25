@@ -11,7 +11,8 @@ class App extends Component {
     super();
     this.state = {
       images: [],
-      page: 0
+      page: 0,
+      input: ''
     };
   }
 
@@ -21,9 +22,11 @@ class App extends Component {
 
   requestPhotos = async (input, newSearch) => {
     await this.addPage(newSearch)
+    if (input) { await this.setState({ input }) }
     console.log(this.state.page)
-    const images = await axios.get(`http://localhost:8989/api/photos/search/${input}?page=${this.state.page}`)
-    this.setState({ images: images.data });
+    const newImages = await axios.get(`http://localhost:8989/api/photos/search/${this.state.input}?page=${this.state.page}`)
+    const allImages = [...this.state.images, ...newImages.data]
+    this.setState({ images: allImages });
   };
 
   findPhoto = id => this.state.images.find(i => i.id === id);
