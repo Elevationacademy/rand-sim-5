@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Photo from './components/Photo'
+import Photo from './components/PhotoSection'
 import Home from './components/Home'
 
 

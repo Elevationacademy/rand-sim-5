@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import Palette from './Palette';
+import React, { Component } from 'react'
+import axios from 'axios'
 
-class Photo extends Component {
+class PhotoSection extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       image: {}
-    };
+    }
   }
 
   componentDidMount = async () => {
-    const image = await axios.get(
-      `http://localhost:8989/api/photos/${this.props.match.params.imageID}`
-    );
-    this.setState({ image: image.data });
-  };
+    const image = await axios.get(`http://localhost:8989/api/photos/${this.props.match.params.imageID}`)
+    this.setState({ image: image.data })
+  }
 
 
 
@@ -34,10 +31,9 @@ class Photo extends Component {
             </div>
             <div id="camera"><i className="fas fa-camera"></i>{image.camera.make}</div>
             </div>
-
       </div>
-    );
-  };
+    )
+  }
 
   render() {
     const image = this.state.image
@@ -46,8 +42,8 @@ class Photo extends Component {
       <div id="single-image-container">
         {image.urls ? this.renderData(image) : null}
       </div>
-    );
+    )
   }
 }
 
-export default Photo;
+export default PhotoSection
