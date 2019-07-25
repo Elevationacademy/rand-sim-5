@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Color extends Component {
+function Color(props) {
+  const r = props.rgb[0]
+  const g = props.rgb[1]
+  const b = props.rgb[2]
 
-  render() {
-    const r = this.props.rgb[0]
-    const g = this.props.rgb[1]
-    const b = this.props.rgb[2]
-
-    return (
-      <div className="color-scheme" style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}></div>
-    )
-  }
+  return (
+    <div className="color-scheme" style={{ backgroundColor: `rgb(${r}, ${g}, ${b})` }}></div>
+  )
 }
 
 export default Color

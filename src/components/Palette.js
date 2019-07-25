@@ -19,7 +19,6 @@ class Palette extends Component {
   }
 
   render() {
-
     this.populatePalette()
 
     return (
