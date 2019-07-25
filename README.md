@@ -1,9 +1,23 @@
 # Goal
-In 
+In this simulation the goal is to convert a messy code base to a clean one using clean code principles.
 
-In the project directory, you can run:
+# Connect to Server
+Make sure to run code from previous week and run mongod
 
-### `npm start`
+# To Do
+
+### Clean Up The Code
+
+- Seperate the app component to separate components according to the provided component tree.
+- In the `PhotoSection` component, instead of calling the `renderData` function create, create a separate component for that code and load it from the `PhotoSection` component.
+- Create a separate component for the `likes-sections`
+- Convert all components that don't have `state` or `internal functions` to functional components.
+- Delete any dead code that isn't being used (console logs, comments, etc...).
+- Create some helper functions for the `requestPhotos` function in the `App` component.
+
+### Extra Features
+
+- Create a "Load More" button to load more images. You can paginate by 
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
