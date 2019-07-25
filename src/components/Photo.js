@@ -34,13 +34,13 @@ class Photo extends Component {
             </div>
             <div id="camera"><i className="fas fa-camera"></i>{image.camera.make}</div>
             </div>
-          
+
       </div>
     );
   };
 
   render() {
-    const image = this.state.image; //props.findPhoto(this.props.match.params.imageID)
+    const image = this.state.image
 
     return (
       <div id="single-image-container">
