@@ -20,25 +20,23 @@ class App extends Component {
 
   getPhotos = async () => await axios.get(`http://localhost:8989/api/photos/search/${this.state.input}?page=${this.state.page}`)
 
-  updateInput = input => { if (input) { await this.setState({ input }) } }
+  updateInput = async input => { if (input) { await this.setState({ input }) } }
 
   combineImages = newImages => [...this.state.images, ...newImages]
 
   handleSearch = async (input, newSearch) => {
     await this.addPage(newSearch)
-    this.updateInput()
+    this.updateInput(input)
     const newImages = await this.getPhotos()
     const allImages = this.combineImages(newImages.data)
     this.setState({ images: allImages })
   }
 
-  findPhoto = id => this.state.images.find(i => i.id === id)
-
   render() {
     return (
       <Router>
-        <Route exact path="/" render={() => <Home images={this.state.images} page={this.state.page} requestPhotos={this.requestPhotos}/>} />
-        <Route path="/image/:imageID" exact render={({ match }) => <Photo match={match} findPhoto={this.findPhoto} />} />
+        <Route exact path="/" render={() => <Home images={this.state.images} page={this.state.page} handleSearch={this.handleSearch}/>} />
+        <Route path="/image/:imageID" exact render={({ match }) => <Photo match={match} />} />
       </Router>
     );
   }

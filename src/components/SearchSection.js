@@ -8,7 +8,7 @@ class SearchSection extends Component {
     };
   }
 
-  requestPhotos = () => this.props.requestPhotos(this.state.input, true);
+  handleSearch = () => this.props.handleSearch(this.state.input, true);
 
   handleInput = e => this.setState({ input: e.target.value });
 
@@ -16,13 +16,19 @@ class SearchSection extends Component {
     return (
       <div id="outer-search">
         <div id="search-container">
-          <input type="text" id="search" placeholder="search photos" value={this.state.input} onChange={this.handleInput} />
-          <div id="search-btn" onClick={this.requestPhotos}>
+          <input
+            type="text"
+            id="search"
+            placeholder="search photos"
+            value={this.state.input}
+            onChange={this.handleInput}
+          />
+          <div id="search-btn" onClick={this.handleSearch}>
             <i className="fas fa-search" />
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
