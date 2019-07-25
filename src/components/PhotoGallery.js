@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Image from './Image';
+import SmallPhoto from './SmallPhoto';
 import Masonry from 'react-masonry-component';
 import LoadMoreButton from './LoadMoreButton';
 
-class ImageSection extends Component {
+class PhotoGallery extends Component {
   handleSearch = () => this.props.handleSearch(null, false);
 
   render() {
-    const childElements = this.props.images.map(i => <Image key={i.id} image={i} />);
+    const childElements = this.props.images.map(i => <SmallPhoto key={i.id} image={i} />);
 
     const masonryOptions = {
       columnWidth: '.grid-sizer',
@@ -25,4 +25,4 @@ class ImageSection extends Component {
   }
 }
 
-export default ImageSection;
+export default PhotoGallery;

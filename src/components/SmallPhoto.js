@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function Image(props) {
+function SmallPhoto(props) {
   const image = props.image
 
   return (
@@ -12,4 +12,4 @@ function Image(props) {
   )
 }
 
-export default Image
+export default SmallPhoto
