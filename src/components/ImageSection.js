@@ -61,7 +61,7 @@ class ImageSection extends Component {
         >
           {childElements}
         </Masonry>
-        {this.props.page ? <div onClick={this.requestPhotos} >LOAD MORE</div> : null}
+        <div id="btn-container">{this.props.page ? <div id="load-btn" onClick={this.requestPhotos} >LOAD MORE</div> : null}</div>
         </div>
     );
   }

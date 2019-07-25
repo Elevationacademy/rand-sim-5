@@ -162,3 +162,22 @@ body {
   background-color: #bdc3c7;
 }
 
+#load-btn {
+  display: inline-block;
+  background-color: rgb(39, 38, 38);
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#load-btn:hover {
+  color: rgb(39, 38, 38);
+  background-color: white;
+  border: solid 0.2px rgb(39, 38, 38);
+}
+
+#btn-container {
+  text-align: center;
+}
