@@ -3,7 +3,8 @@ import Palette from './Palette'
 import LikesSection from './LikesSection';
 
 function BigPhoto(props) {
-  const image = props.image.tags.splice(3)
+  const image = props.image
+  image.tags.splice(3)
 
   return (
     <div id="single-image">

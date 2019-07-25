@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './App.css';
-import axios from 'axios';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { Component } from 'react'
+import './App.css'
+import axios from 'axios'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Photo from './components/PhotoSection'
 import Home from './components/Home'
 
@@ -13,23 +13,26 @@ class App extends Component {
       images: [],
       page: 0,
       input: ''
-    };
+    }
   }
 
   addPage = async (newSearch) => await newSearch ? this.setState({ page: 1 }) : this.setState({ page: ++this.state.page })
 
-  // resetPage = async () => await this.setState({ page: 0 })
+  getPhotos = async () => await axios.get(`http://localhost:8989/api/photos/search/${this.state.input}?page=${this.state.page}`)
 
-  requestPhotos = async (input, newSearch) => {
+  updateInput = input => { if (input) { await this.setState({ input }) } }
+
+  combineImages = newImages => [...this.state.images, ...newImages]
+
+  handleSearch = async (input, newSearch) => {
     await this.addPage(newSearch)
-    if (input) { await this.setState({ input }) }
-    console.log(this.state.page)
-    const newImages = await axios.get(`http://localhost:8989/api/photos/search/${this.state.input}?page=${this.state.page}`)
-    const allImages = [...this.state.images, ...newImages.data]
-    this.setState({ images: allImages });
-  };
+    this.updateInput()
+    const newImages = await this.getPhotos()
+    const allImages = this.combineImages(newImages.data)
+    this.setState({ images: allImages })
+  }
 
-  findPhoto = id => this.state.images.find(i => i.id === id);
+  findPhoto = id => this.state.images.find(i => i.id === id)
 
   render() {
     return (
@@ -41,4 +44,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
