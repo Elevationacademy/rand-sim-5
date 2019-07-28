@@ -1,15 +1,15 @@
 # Goal
-In this simulation the goal is to convert a messy code base to a clean one using clean code principles.
+In this simulation the goal is to convert a messy code base into a clean one using clean code principles.
 
 # Connect to Server
-Make sure to run code from previous week and run mongod
+Make sure you have [this repo](https://github.com/Elevationacademy/rnd-server-simulation) cloned and you are running it's server. Additionally, please run `mongod`
 
 # To Do
 
 ### Clean Up The Code
 
-- Seperate the app component to separate components according to the provided component tree.
-- In the `PhotoSection` component, instead of calling the `renderData` function create, create a separate component for that code and load it from the `PhotoSection` component.
+- Seperate all the components in `App.js` to separate files according to the provided component tree.
+- In the `PhotoSection` component, instead of calling the `renderData` function, create a separate component for that code and load it from the `PhotoSection` component.
 - Create a separate component for the `likes-sections`
 - Convert all components that don't have `state` or `internal functions` to functional components.
 - Delete any dead code that isn't being used (console logs, comments, etc...).
@@ -17,65 +17,4 @@ Make sure to run code from previous week and run mongod
 
 ### Extra Features
 
-- Create a "Load More" button to load more images. You can paginate by 
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Create a "Load More" button at the bottom of the page to load more images underneath the already loaded images. You can paginate by adding `?page={pageNumber}` to the end of your API request.
