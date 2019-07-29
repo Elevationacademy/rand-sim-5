@@ -24,9 +24,9 @@ class App extends Component {
     await this.addPage(newSearch)
     if (input) { await this.setState({ input }) }
     console.log(this.state.page)
-    const newImages = await axios.get(`http://localhost:8989/api/photos/search/${this.state.input}?page=${this.state.page}`)
-    const allImages = [...this.state.images, ...newImages.data]
-    this.setState({ images: allImages });
+    const newImages = await axios.get(`http://localhost:8989/api/photos/search/${this.state.input}`)
+    console.log(newImages)
+    this.setState({ images: newImages.data });
   };
 
   findPhoto = id => this.state.images.find(i => i.id === id);
