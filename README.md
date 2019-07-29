@@ -24,3 +24,8 @@ Make sure you have [this repo](https://github.com/Elevationacademy/rnd-server-si
 - Create a "Load More" button at the bottom of the page to load more images underneath the already loaded images. You can paginate by adding `?page={pageNumber}` to the end of your API request.
 - If the user receives a 500 error message from the server you should display a notification that notifies the user that an error occurred.
 - Allow the user to click 'Enter' on the keyboard to search for images.
+
+# Reminder
+Don't forget to add imports and exports for any new files you create.
+
+Good luck!
