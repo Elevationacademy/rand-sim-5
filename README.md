@@ -2,7 +2,14 @@
 In this simulation the goal is to convert a messy code base into a clean one using clean code principles.
 
 # Connect to Server
-Make sure you have [this repo](https://github.com/Elevationacademy/rnd-server-simulation) cloned and you are running it's server. Additionally, please run `mongod`
+- Make sure you have [this separate repo](https://github.com/Elevationacademy/rnd-server-simulation) cloned.
+- Run `npm install` and then run the server with `node server.js`.
+- Run `mongod`.
+- Now open fork this current repo and clone it onto your computer.
+- Run `npm install`.
+- Start the react app by running `npm start`.
+- You have a file attached called Architecture.pdf that explains the architecture of the application, use it!
+- Note: This is a front end exercise and therefore you will only be working on the `React` part of this app. Don't worry about the server side for now.
 
 # To Do
 
