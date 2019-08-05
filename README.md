@@ -3,6 +3,7 @@ In this simulation the goal is to convert a messy code base into a clean one usi
 
 # Connect to Server
 - Make sure you have [this separate repo](https://github.com/Elevationacademy/rnd-server-simulation) cloned.
+- Run `git checkout minified` in your terminal in order to checkout to the `minified` branch.
 - Run `npm install` and then run the server with `node server.js`.
 - Run `mongod`.
 - Now open fork this current repo and clone it onto your computer.
