@@ -1,7 +1,11 @@
 # Goal
-In this simulation the goal is to convert a messy code base into a clean one using clean code principles.
+
+In this simulation the goal is to convert a messy code base into a clean one using clean code principles, fix a bug, and write new features.
+
+You should keep the browser open and make sure your app still works after making changes.
 
 # Connect to Server
+
 - Make sure you have [this separate repo](https://github.com/Elevationacademy/rnd-server-simulation) cloned.
 - Run `git checkout minified` in your terminal in order to checkout to the `minified` branch.
 - Run `npm install` and then run the server with `node server.js`.
@@ -9,31 +13,27 @@ In this simulation the goal is to convert a messy code base into a clean one usi
 - Now open fork this current repo and clone it onto your computer.
 - Run `npm install`.
 - Start the react app by running `npm start`.
-- You have a file attached called Architecture.pdf that explains the architecture of the application, use it!
 - Note: This is a front end exercise and therefore you will only be working on the `React` part of this app. Don't worry about the server side for now.
 
 # To Do
 
-### Clean Up The Code
+### Clean Up The Code & Fix Bug
 
-- Seperate all the components in `App.js` to separate files according to the provided component tree.
-- In the `PhotoSection` component, instead of calling the `renderData` function, create a separate component for that code and load it from the `PhotoSection` component.
-- Create a separate component for the `likes-sections`
+- Seperate all the components in `App.js` to separate files according to the provided component tree [on the board].
+- [Bug] When clicking the search button the app crashes.
+- In the `Photo` component, instead of calling the `renderData` function, create a separate component for that code called `PhotoSection` and load it as a component instead of a method call.
+- Create a component called `LikesSection` and load it as a component in place of the `likes-sections` div.
 - Convert all components that don't have `state` or `internal functions` to functional components.
 - Delete any dead code that isn't being used (console logs, comments, functions that aren't being used, etc...).
-- Create some helper functions for the `requestPhotos` function in the `App` component.
-
-### Known Bugs
-
-- When clicking the search button the app crashes.
+- Create some helper functions for the `requestPhotos` function in the `App` component [it shouldn't do everything itself].
 
 ### Extra Features
 
-- Create a "Load More" button at the bottom of the page to load more images underneath the already loaded images. You can paginate by adding `?page={pageNumber}` to the end of your API request.
-- If the user receives a 500 error message from the server you should display a notification that notifies the user that an error occurred.
+- Create a "Load More" button at the bottom of the page to load more images underneath the already loaded images. You can request different pages from the server by adding `?page={pageNumber}` to the end of your API request.
 - Allow the user to click 'Enter' on the keyboard to search for images.
 
 # Reminder
+
 Don't forget to add imports and exports for any new files you create.
 
 Good luck!
