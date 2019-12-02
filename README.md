@@ -7,10 +7,10 @@ You should keep the browser open and make sure your app still works after making
 # Connect to Server
 
 - Make sure you have [this separate repo](https://github.com/Elevationacademy/rnd-server-simulation) cloned.
-- Run `git checkout minified` in your terminal in order to checkout to the `minified` branch.
+- Run `git checkout clean-code` in your terminal in order to checkout to the `clean-code` branch.
 - Run `npm install` and then run the server with `node server.js`.
 - Run `mongod`.
-- Now open fork this current repo and clone it onto your computer.
+- Now fork this current repo and clone it onto your computer.
 - Run `npm install`.
 - Start the react app by running `npm start`.
 - Note: This is a front end exercise and therefore you will only be working on the `React` part of this app. Don't worry about the server side for now.
@@ -19,7 +19,7 @@ You should keep the browser open and make sure your app still works after making
 
 ### Clean Up The Code & Fix Bug
 
-- Seperate all the components in `App.js` to separate files according to the provided component tree [on the board].
+- Seperate all the components in `App.js` to separate files according to the provided component tree [Architecture.pdf].
 - [Bug] When clicking the search button the app crashes.
 - In the `Photo` component, instead of calling the `renderData` function, create a separate component for that code called `PhotoSection` and load it as a component instead of a method call.
 - Create a component called `LikesSection` and load it as a component in place of the `likes-sections` div.
